@@ -1,1 +1,4 @@
 see on  proov fail
+1) git add nimi
+2) git commit -m "kirjeldus"
+3)git push -uf rsha master
