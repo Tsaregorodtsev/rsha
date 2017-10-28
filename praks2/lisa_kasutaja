@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+if [ $# -ne 1 ]; then
+	echo "kasutus juhend: $0 kasutajanimi"
+else
+kasutajanimi=$1
+useradd $kasutajanimi -m -s /bin/bash
+if [ $? -eq 0 ]; then
+	echo "kasutaja nimega $kasutajanimi on lisatud susteemis"
+	cat /etc/passwd | grep $kasutajanimi
+	ls -la /home/$kasutajanimi
+else
+	echo "probleem kasutaja $kasutaja lisamisega"
+	echo "probleem on kood $"
+fi
+fi
